@@ -1,4 +1,106 @@
+.anim {
+	width: 100%;
+	height: 900px;
+	position: relative;
+	margin: 0 auto;
+}
 .background {
 	width: 100%;
-
+	height: 900px;
+	position: absolute;
+    z-index: 1;
+}
+.car1 {
+	width: 200px;
+	height: 100px;
+	position: absolute;
+	right: 0;
+	bottom: 170px;
+	animation: car1-anim 3s infinite 3s ease-in;
+	z-index: 2;
+}
+@keyframes car1-anim {
+0% {transform: translateX(0px);}
+100% {transform: translateX(-1500px);}
+}
+.car2 {
+	width: 250px;
+	height: 100px;
+	position: absolute;
+	left: 0;
+	bottom: 100px;
+	animation: car2-anim 2s infinite 3s ease-in;
+	z-index: 3;
+}
+@keyframes car2-anim {
+0% {transform: translateX(0px);}
+100% {transform: translateX(1500px);}
+}
+.snow {
+	width: 300px;
+	height: 150px;
+	position: absolute;
+	left: 20%;
+	top: 15%;
+	z-index: 2;
+	animation: snow-anim 8s infinite 2s ease-in;
+}
+@keyframes snow-anim {
+	0% {transform: translate(0px, 0px) rotate(0deg);}
+	50% {transform: translate(100px, 300px) rotate(180deg) scale(2, 2);}
+	100% {transform: translate(600px,400px) rotate(360deg) scale(2, 2);}
+}
+.birds {
+	width: 300px;
+	height: 100px;
+	position: absolute;
+	left: 30%;
+	top: 15%;
+	z-index: 3;
+	transition: all 0.2s initial;
+	animation: birdsanim 15s infinite 2s ease-out;
+}
+@keyframes birdsanim {
+	0% {transform: translateX(0px);}
+	50% {transform: translateX(500px);}
+	100% {transform: translateX(900px);}
+}
+.birds:hover {
+	width: 500px;
+	height: 165px;
+	transform: skew(0deg,20deg);
+}
+.sun {
+	width: 150px;
+	height: 150px;
+	position: absolute;
+	top: 10%;
+	right: 10%;
+	z-index: 2;
+	transition: all 0.2s initial;
+	animation: sunanim 20s infinite 1s ease;
+}
+@keyframes sunanim {
+	0% {transform: rotate(10deg);}
+	50% {transform: rotate(360deg);}
+	100% {transform: rotate(0deg);}
+}
+.sun:hover {
+	width: 300px;
+	height: 300px;
+}
+.dear {
+	width: 70px;
+	height: 25px;
+	position: absolute;
+	left: 200px;
+	bottom: 300px;
+	z-index: 2;
+	opacity:0.7;
+	transition: all 0.4s ease;
+}
+.dear:hover {
+	width: 150px;
+	height: 50px;
+	opacity: 1.0;
 }
